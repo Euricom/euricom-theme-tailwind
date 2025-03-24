@@ -1,0 +1,1 @@
+# euricom-theme-tailwind
