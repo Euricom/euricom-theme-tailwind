@@ -27,7 +27,7 @@ export default function DefaultTheme() {
                 { name: '700', color: 'euri-green-700', variable: 'var(--color-euri-green-700)' },
                 { name: '800', color: 'euri-green-800', variable: 'var(--color-euri-green-800)' },
                 { name: '900', color: 'euri-green-900', variable: 'var(--color-euri-green-900)' },
-            ]
+            ],
         },
         {
             name: 'Euri Charcoal',
@@ -45,7 +45,7 @@ export default function DefaultTheme() {
                 { name: '700', color: 'euri-charcoal-700', variable: 'var(--color-euri-charcoal-700)' },
                 { name: '800', color: 'euri-charcoal-800', variable: 'var(--color-euri-charcoal-800)' },
                 { name: '900', color: 'euri-charcoal-900', variable: 'var(--color-euri-charcoal-900)' },
-            ]
+            ],
         },
         {
             name: 'Euri Midnight',
@@ -63,7 +63,7 @@ export default function DefaultTheme() {
                 { name: '700', color: 'euri-midnight-700', variable: 'var(--color-euri-midnight-700)' },
                 { name: '800', color: 'euri-midnight-800', variable: 'var(--color-euri-midnight-800)' },
                 { name: '900', color: 'euri-midnight-900', variable: 'var(--color-euri-midnight-900)' },
-            ]
+            ],
         },
         {
             name: 'Euri Steel Gray',
@@ -81,7 +81,7 @@ export default function DefaultTheme() {
                 { name: '700', color: 'euri-steel-gray-700', variable: 'var(--color-euri-steel-gray-700)' },
                 { name: '800', color: 'euri-steel-gray-800', variable: 'var(--color-euri-steel-gray-800)' },
                 { name: '900', color: 'euri-steel-gray-900', variable: 'var(--color-euri-steel-gray-900)' },
-            ]
+            ],
         },
     ];
 
@@ -115,7 +115,17 @@ export default function DefaultTheme() {
                 {copiedColor && (
                     <div className="fixed top-4 right-4 bg-success text-success-content px-4 py-2 rounded-md shadow-md z-50 animate-in fade-in duration-200">
                         <div className="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            >
                                 <path d="M20 6L9 17L4 12"></path>
                             </svg>
                             <span>Copied: {copiedColor}</span>
@@ -127,7 +137,7 @@ export default function DefaultTheme() {
                 <div className="space-y-6">
                     <h3 className="text-xl font-semibold border-b pb-2">Brand Colors</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {brandColors.map((color) => (
+                        {brandColors.map(color => (
                             <div
                                 key={color.color}
                                 className="flex flex-col rounded-lg overflow-hidden border border-euri-steel-gray-200 dark:border-euri-charcoal-700 shadow-sm"
@@ -139,13 +149,13 @@ export default function DefaultTheme() {
                                 >
                                     {/* Tint boxes displayed in the corner */}
                                     <div className="absolute bottom-3 right-3 grid grid-cols-5 gap-1 z-10">
-                                        {color.tints.map((tint) => (
+                                        {color.tints.map(tint => (
                                             <div
                                                 key={tint.color}
                                                 className="w-5 h-5 rounded-sm border border-white/30 dark:border-black/30 shadow-sm cursor-pointer hover:scale-110 transition-transform"
                                                 style={{ backgroundColor: tint.variable }}
                                                 title={`${color.name} ${tint.name}`}
-                                                onClick={(e) => {
+                                                onClick={e => {
                                                     e.stopPropagation(); // Prevent triggering parent onClick
                                                     copyToClipboard(`var(--color-${tint.color})`, 'CSS', `${color.name} ${tint.name}`);
                                                 }}
@@ -156,7 +166,17 @@ export default function DefaultTheme() {
                                     {/* Copy icon overlay */}
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                         <div className="bg-white/90 dark:bg-euri-charcoal-800/90 rounded-full p-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
                                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                             </svg>
@@ -179,7 +199,17 @@ export default function DefaultTheme() {
                                             <span className="text-sm font-mono">OKLCH: </span>
                                             <div className="flex items-center gap-1">
                                                 <code className="text-sm">{color.value}</code>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                >
                                                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                                 </svg>
@@ -198,7 +228,17 @@ export default function DefaultTheme() {
                                             <span className="text-sm font-mono">CSS: </span>
                                             <div className="flex items-center gap-1">
                                                 <code className="text-sm">var(--color-{color.color})</code>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                >
                                                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                                 </svg>
@@ -217,7 +257,17 @@ export default function DefaultTheme() {
                                             <span className="text-sm font-mono">Tailwind: </span>
                                             <div className="flex items-center gap-1">
                                                 <code className="text-sm">bg-{color.color}</code>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                >
                                                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                                 </svg>
@@ -233,9 +283,7 @@ export default function DefaultTheme() {
 
             <section className="border-1 border-base-100 dark:border-base-300  rounded-lg p-8 bg-base text-base-content shadow-sm dark:bg-base-200 ">
                 <h2 className="text-2xl font-semibold mb-4">Euricom Theme Components</h2>
-                <p className="mb-4">
-                    Here are components styled with Euricom's custom theme variables.
-                </p>
+                <p className="mb-4">Here are components styled with Euricom's custom theme variables.</p>
 
                 <h3 className="text-xl font-semibold mt-8 mb-3">Buttons</h3>
                 <div className="flex flex-wrap gap-4">
@@ -255,12 +303,12 @@ export default function DefaultTheme() {
                     </button>
 
                     {/* Outline button */}
-                    <button className="border border-euri-charcoal dark:border-accent bg-transparent text-accent-content  hover:bg-accent/20 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 shadow-xs transition-all focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-focus/20 dark:hover:bg-accent/70">
+                    <button className="border bg-transparent hover:bg-accent/50 shadow-xs text-accent-content border-accent hover:text-accent-content dark:border-accent dark:hover:bg-accent/50 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2  transition-all focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-focus/20 ">
                         Outline
                     </button>
 
                     {/* Ghost button */}
-                    <button className="hover:bg-accent hover:text-accent-content dark:hover:bg-accent/50 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 transition-all focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-focus/20">
+                    <button className=" text-accent-content hover:bg-accent/50 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 transition-all focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-focus/20">
                         Ghost
                     </button>
 
@@ -268,13 +316,7 @@ export default function DefaultTheme() {
                     <button className="text-primary hover:underline underline-offset-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 transition-all focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-focus/20">
                         Link
                     </button>
-
-                    {/* Disabled button */}
-                    <button disabled className="bg-primary text-primary-content inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 shadow-xs transition-all opacity-50 cursor-not-allowed">
-                        Disabled
-                    </button>
                 </div>
-
 
                 <h3 className="text-xl font-semibold mt-8 mb-3">Form Controls</h3>
 
@@ -284,7 +326,7 @@ export default function DefaultTheme() {
                         <label className="text-sm font-medium mb-2 block">Default Input</label>
                         <input
                             type="text"
-                            className="file:text-foreground placeholder:text-input-content/30 selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-input-content shadow-xs focus-visible:border-primary focus-visible:ring-[3px] focus-visible:ring-primary/20"
+                            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-input-content shadow-xs outline-none transition-all placeholder:text-input-content/30 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] disabled:opacity-50 dark:bg-input/30"
                             placeholder="Type something..."
                         />
                     </div>
@@ -292,17 +334,11 @@ export default function DefaultTheme() {
                     <div>
                         <label className="text-sm font-medium mb-2 block">Textarea</label>
                         <textarea
-                            className="file:text-foreground placeholder:text-input-content/30 selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex min-h-[80px] w-full min-w-0 rounded-md border bg-transparent px-3 py-2 text-input-content shadow-xs focus-visible:border-primary focus-visible:ring-[3px] focus-visible:ring-primary/20"
+                            className="min-h-16 w-full rounded-md border border-input bg-transparent px-3 py-2 text-input-content shadow-xs outline-none transition-all placeholder:text-input-content/30 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] disabled:opacity-50 dark:bg-input/30"
                             placeholder="Type your message here..."
                         ></textarea>
                     </div>
-
-
-
-
                 </div>
-
-
             </section>
         </div>
     );

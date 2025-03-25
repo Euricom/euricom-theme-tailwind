@@ -80,9 +80,9 @@
   --color-primary-content: var(--color-euri-charcoal-50);
 
   --color-secondary: var(--color-euri-midnight);
-  --color-secondary-content: var(--color-euri-charcoal-50);
+  --color-secondary-content: var(--color-base);
 
-  --color-accent: var(--color-euri-steel-gray-100);
+  --color-accent: var(--color-euri-steel-gray-200);
   --color-accent-content: var(--color-euri-steel-gray-900);
 
   --color-success: var(--color-green);
@@ -108,25 +108,25 @@
   --color-primary-content: var(--color-euri-charcoal-50);
 
   --color-secondary: var(--color-euri-light-midnight);
-  --color-secondary-content: var(--color-euri-midnight-50);
+  --color-secondary-content: var(--color-base);
 
   --color-accent: var(--color-euri-steel-gray-200);
   --color-accent-content: var(--color-euri-steel-gray-900);
 
   --color-success: var(--color-green);
-  --color-success-content: var(--color-euri-charcoal-50);
+  --color-success-content: var(--color-base-content);
 
   --color-warning: var(--color-orange);
-  --color-warning-content: var(--color-euri-charcoal-50);
+  --color-warning-content: var(--color-base-content);
 
   --color-error: var(--color-red);
-  --color-error-content: var(--color-euri-charcoal-50);
+  --color-error-content: var(--color-base);
 
   --color-info: var(--color-blue);
-  --color-info-content: var(--color-euri-charcoal-50);
+  --color-info-content: var(--color-base-content);
 
   --color-input: var(--color-euri-charcoal-200);
-  --color-input-content: var(--color-euri-charcoal-900);
+  --color-input-content: var(--color-base-content);
 
   --color-focus: var(--color-euri-midnight-300);
 }
@@ -142,25 +142,25 @@
   --color-primary-content: var(--color-euri-charcoal-900);
 
   --color-secondary: var(--color-euri-midnight);
-  --color-secondary-content: var(--color-euri-charcoal-50);
+  --color-secondary-content: var(--color-base-content);
 
   --color-accent: var(--color-euri-midnight);
-  --color-accent-content: var(--color-euri-charcoal-50);
+  --color-accent-content: var(--color-base-content);
 
   --color-success: var(--color-green);
-  --color-success-content: var(--color-euri-charcoal-50);
+  --color-success-content: var(--color-base-content);
 
   --color-warning: var(--color-orange);
-  --color-warning-content: var(--color-euri-charcoal-50);
+  --color-warning-content: var(--color-base-content);
 
   --color-error: var(--color-red);
-  --color-error-content: var(--color-euri-charcoal-50);
+  --color-error-content: var(--color-base-content);
 
   --color-info: var(--color-blue);
-  --color-info-content: var(--color-euri-charcoal-50);
+  --color-info-content: var(--color-base-content);
 
   --color-input: var(--color-euri-charcoal-500);
-  --color-input-content: var(--color-euri-charcoal-50);
+  --color-input-content: var(--color-base-content);
 
   --color-focus: var(--color-euri-green);
 }
@@ -174,7 +174,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
   *,
   ::after,
   ::before,
@@ -186,33 +185,10 @@
 
 html,
 body {
-  @apply bg-base;
+  @apply bg-base-100 dark:bg-base;
   @apply font-primary;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
-  }
-
-  /* Modern scrollbar styling */
-  ::-webkit-scrollbar {
-    @apply w-2;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-euri-steel-gray-300 dark:bg-base-300 rounded-md transition-colors hover:bg-euri-steel-gray-400 dark:hover:bg-euri-charcoal-800;
-  }
-
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-euri-steel-gray-300) transparent;
-  }
-
-  .dark * {
-    scrollbar-color: var(--color-euri-charcoal-800) transparent;
   }
 }

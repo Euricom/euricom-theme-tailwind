@@ -24,9 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   // Determine which navigation link is active based on the current path
   const isActive = (path: string) => {
-    return location.pathname === path ?
-      "bg-primary text-primary-foreground" :
-      "hover:bg-muted";
+    return location.pathname === path ? 'bg-secondary text-secondary-content' : 'hover:bg-accent/50';
   };
 
   return (
@@ -40,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <ThemeProvider defaultTheme="light" storageKey="ui-theme">
           {/* Navigation Bar with Theme Toggle */}
-          <div className="w-screen mx-auto px-4 py-2 mb-6 sticky top-0 bg-base-100 z-50 border-b border-base-300">
+          <div className="w-full px-4 py-2 mb-6 sticky top-0 bg-base-100 z-50 border-b border-base-300">
             <div className="max-w-screen-lg mx-auto flex justify-between items-center">
               <nav className="flex space-x-2 border rounded-lg p-1 bg-base-100">
                 <Link
@@ -61,10 +59,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
 
-
-          <main className='p-4 max-w-screen-lg mx-auto'>
-            {children}
-          </main>
+          <main className="p-4 max-w-screen-lg mx-auto">{children}</main>
 
           <Toaster />
           <ScrollRestoration />
