@@ -15,7 +15,7 @@ export const links: LinksFunction = () => [
   },
   {
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
+    href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap',
   },
 ];
 
@@ -24,7 +24,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   // Determine which navigation link is active based on the current path
   const isActive = (path: string) => {
-    return location.pathname === path ? 'bg-primary text-primary-foreground' : 'hover:bg-muted';
+    return location.pathname === path ?
+      "bg-primary text-primary-foreground" :
+      "hover:bg-muted";
   };
 
   return (
@@ -55,11 +57,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </Link>
               </nav>
 
+
               <ThemeToggle />
             </div>
           </div>
 
-          <main className="p-4 max-w-screen-lg mx-auto">{children}</main>
+
+          <main className='p-4 max-w-screen-lg mx-auto'>
+            {children}
+          </main>
 
           <Toaster />
           <ScrollRestoration />
