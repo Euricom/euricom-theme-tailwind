@@ -1,39 +1,43 @@
-# Welcome to Remix!
+## Euricom Theme Integration
 
-- 📖 [Remix docs](https://remix.run/docs)
+This package provides a basic brand theme for internal Euricom projects that follows our new branding guidelines. It supports both light and dark themes out of the box.
 
-## Development
+⚠️ **Important**: Your project must use Tailwind CSS v4 to work with this theming system.
 
-Run the dev server:
-
-```shellscript
-npm run dev
-```
-
-## Deployment
-
-First, build your app for production:
+## Installation and Run Euricom Theme Previews
 
 ```sh
-npm run build
+npm install    # Install dependencies
+npm run dev    # Start dev server
 ```
 
-Then run the app in production mode:
+### Option 1: Basic Tailwind Theme (Without ShadcN)
 
-```sh
-npm start
-```
+If you want to use only the Euricom theme colors with Tailwind:
 
-Now you'll need to pick a host to deploy it to.
+1. Copy `tailwind.euri.css` from the `app` folder into your project
+2. Use this as your main styling entry point
+3. The theme restricts color usage to only Euricom-approved colors via the `@theme` configuration
+   - To use Tailwind's default colors as well, remove the `color*` initial line (not recommended)
 
-### DIY
+### Option 2: Full Theme with ShadcN Components
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+For projects using ShadcN components:
 
-Make sure to deploy the output of `npm run build`
+1. Copy both CSS files from the `app` folder:
+   - `tailwind.euri.css` - Main Euricom theming
+   - `tailwind.css` - ShadcN component styling
 
-- `build/server`
-- `build/client`
+2. Copy the following modified ShadcN components to replace the default ones:
+   - `button.tsx`
+   - `input.tsx`
+   - `textarea.tsx`
+
+These components have been specifically modified to work with our theming system.
+
+### Theme Switching
+
+The theme includes both light and dark modes. The system respects the user's system preferences by default but can be toggled manually using the provided theme toggle component.
 
 ## Styling
 

@@ -30,7 +30,7 @@ export default function ShadcnThemePage() {
     return (
         <div className="space-y-8">
 
-            <h1 className="text-4xl font-bold text-center">Default Theme</h1>
+            <h1 className="text-4xl font-bold text-center">Shadcn Theme</h1>
             {/* Buttons Section */}
             <div className="grid grid-cols-2 gap-4">
                 <Card>
