@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "nize.oklch-preview",
+    "oxc.oxc-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "yoavbls.pretty-ts-errors",
+    "esbenp.prettier-vscode"
+  ]
+}
