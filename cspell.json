@@ -1,4 +1,17 @@
 {
-  "ignorePaths": ["node_modules", "public", "build/**", ".git/**", ".env"],
-  "words": ["euricom", "euri", "oxlint", "pnpm", "isbot"]
+  "ignorePaths": [
+    "node_modules",
+    "public",
+    "build/**",
+    ".git/**",
+    ".env"
+  ],
+  "words": [
+    "euricom",
+    "euri",
+    "oxlint",
+    "pnpm",
+    "isbot",
+    "shadcn"
+  ]
 }

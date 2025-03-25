@@ -1,0 +1,218 @@
+@import 'tailwindcss';
+@import "tw-animate-css";
+/*
+  ---break---
+*/
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-*: initial;
+
+  /* Typography */
+  --font-primary: 'Montserrat', sans-serif;
+
+  /* Branding Colors Palettes */
+  --color-euri-light-midnight: oklch(0.68 0.03 203.64);
+  --color-euri-light-steel-gray: oklch(0.97 0 214.33);
+
+  /* Euri Green Tints */
+  --color-euri-green-50: oklch(0.98 0.04 142.5);
+  --color-euri-green-100: oklch(0.95 0.1 142.5);
+  --color-euri-green-200: oklch(0.91 0.18 142.5);
+  --color-euri-green-300: oklch(0.89 0.25 142.5);
+  --color-euri-green: oklch(0.87 0.29 142.5);
+  --color-euri-green-500: oklch(0.8 0.27 142.5);
+  --color-euri-green-600: oklch(0.68 0.23 142.5);
+  --color-euri-green-700: oklch(0.55 0.19 142.5);
+  --color-euri-green-800: oklch(0.45 0.15 142.5);
+  --color-euri-green-900: oklch(0.35 0.1 142.5);
+
+  /* Euri Charcoal Tints */
+
+  --color-euri-charcoal-50: oklch(0.98 0.02 248.56);
+  --color-euri-charcoal-100: oklch(0.9 0.02 248.56);
+  --color-euri-charcoal-200: oklch(0.82 0.02 248.56);
+  --color-euri-charcoal-300: oklch(0.7 0.02 248.56);
+  --color-euri-charcoal-400: oklch(0.55 0.02 248.56);
+  --color-euri-charcoal-500: oklch(0.4 0.02 248.56);
+  --color-euri-charcoal: oklch(0.26 0.02 248.56);
+  --color-euri-charcoal-700: oklch(0.22 0.02 248.56);
+  --color-euri-charcoal-800: oklch(0.18 0.02 248.56);
+  --color-euri-charcoal-900: oklch(0.14 0.02 248.56);
+
+  /* Midnight Tints */
+  --color-euri-midnight-50: oklch(0.95 0.02 205.39);
+  --color-euri-midnight-100: oklch(0.85 0.03 205.39);
+  --color-euri-midnight-200: var(--color-euri-light-midnight);
+  --color-euri-midnight-300: oklch(0.65 0.05 205.39);
+  --color-euri-midnight-400: oklch(0.55 0.06 205.39);
+  --color-euri-midnight-500: oklch(0.45 0.06 205.39);
+  --color-euri-midnight: oklch(0.34 0.06 205.39);
+  --color-euri-midnight-700: oklch(0.25 0.05 205.39);
+  --color-euri-midnight-800: oklch(0.2 0.05 205.39);
+  --color-euri-midnight-900: oklch(0.15 0.05 205.39);
+
+  /* Steel Gray Tints */
+  --color-euri-steel-gray-50: var(--color-euri-light-steel-gray);
+  --color-euri-steel-gray-100: oklch(0.95 0.01 202.03);
+  --color-euri-steel-gray-200: oklch(0.92 0.015 202.03);
+  --color-euri-steel-gray-300: oklch(0.9 0.02 202.03);
+  --color-euri-steel-gray-400: oklch(0.85 0.02 202.03);
+  --color-euri-steel-gray: oklch(0.87 0.02 202.03);
+  --color-euri-steel-gray-600: oklch(0.75 0.02 202.03);
+  --color-euri-steel-gray-700: oklch(0.6 0.02 202.03);
+  --color-euri-steel-gray-800: oklch(0.5 0.02 202.03);
+  --color-euri-steel-gray-900: oklch(0.4 0.02 202.03);
+
+  /* State Colors */
+  --color-green: oklch(0.75 0.15 142.5);
+  --color-orange: oklch(0.8 0.15 85.9);
+  --color-red: oklch(0.7 0.25 27.325);
+  --color-blue: oklch(0.7 0.15 205.39);
+
+  --color-base: oklch(0.99 0 0 / 1);
+  --color-base-100: oklch(0.96 0 197.14 / 1);
+  --color-base-200: oklch(0.93 0 106.42 / 1);
+  --color-base-300: oklch(0.89 0 0 / 1);
+  --color-base-content: var(--color-euri-charcoal-900);
+
+  --color-primary: var(--color-euri-green);
+  --color-primary-content: var(--color-euri-charcoal-50);
+
+  --color-secondary: var(--color-euri-midnight);
+  --color-secondary-content: var(--color-euri-charcoal-50);
+
+  --color-accent: var(--color-euri-steel-gray-100);
+  --color-accent-content: var(--color-euri-steel-gray-900);
+
+  --color-success: var(--color-green);
+  --color-success-content: var(--color-green-700);
+
+  --color-warning: var(--color-orange);
+  --color-warning-content: var(--color-orange-700);
+
+  --color-error: var(--color-red);
+  --color-error-content: var(--color-euri-charcoal-50);
+
+  --color-info: var(--color-blue);
+  --color-info-content: var(--color-blue-700);
+
+  --color-input: var(--color-euri-charcoal-400);
+  --color-input-content: var(--color-euri-charcoal-50);
+
+  --color-focus: var(--color-blue);
+}
+
+:root {
+  --color-primary: var(--color-euri-charcoal);
+  --color-primary-content: var(--color-euri-charcoal-50);
+
+  --color-secondary: var(--color-euri-light-midnight);
+  --color-secondary-content: var(--color-euri-midnight-50);
+
+  --color-accent: var(--color-euri-steel-gray-200);
+  --color-accent-content: var(--color-euri-steel-gray-900);
+
+  --color-success: var(--color-green);
+  --color-success-content: var(--color-euri-charcoal-50);
+
+  --color-warning: var(--color-orange);
+  --color-warning-content: var(--color-euri-charcoal-50);
+
+  --color-error: var(--color-red);
+  --color-error-content: var(--color-euri-charcoal-50);
+
+  --color-info: var(--color-blue);
+  --color-info-content: var(--color-euri-charcoal-50);
+
+  --color-input: var(--color-euri-charcoal-200);
+  --color-input-content: var(--color-euri-charcoal-900);
+
+  --color-focus: var(--color-euri-midnight-300);
+}
+
+.dark {
+  --color-base: var(--color-euri-charcoal-900);
+  --color-base-100: var(--color-euri-charcoal-800);
+  --color-base-200: var(--color-euri-charcoal-700);
+  --color-base-300: var(--color-euri-charcoal);
+  --color-base-content: var(--color-euri-charcoal-50);
+
+  --color-primary: var(--color-euri-green);
+  --color-primary-content: var(--color-euri-charcoal-900);
+
+  --color-secondary: var(--color-euri-midnight);
+  --color-secondary-content: var(--color-euri-charcoal-50);
+
+  --color-accent: var(--color-euri-midnight);
+  --color-accent-content: var(--color-euri-charcoal-50);
+
+  --color-success: var(--color-green);
+  --color-success-content: var(--color-euri-charcoal-50);
+
+  --color-warning: var(--color-orange);
+  --color-warning-content: var(--color-euri-charcoal-50);
+
+  --color-error: var(--color-red);
+  --color-error-content: var(--color-euri-charcoal-50);
+
+  --color-info: var(--color-blue);
+  --color-info-content: var(--color-euri-charcoal-50);
+
+  --color-input: var(--color-euri-charcoal-400);
+  --color-input-content: var(--color-euri-charcoal-50);
+
+  --color-focus: var(--color-euri-green);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+html,
+body {
+  @apply bg-base;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+
+
+  /* Modern scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-euri-steel-gray-300 dark:bg-base-300 rounded-md transition-colors hover:bg-euri-steel-gray-400 dark:hover:bg-euri-charcoal-800;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-euri-steel-gray-300) transparent;
+  }
+
+  .dark * {
+    scrollbar-color: var(--color-euri-charcoal-800) transparent;
+  }
+}
