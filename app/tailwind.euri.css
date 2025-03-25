@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 /*
   ---break---
 */
@@ -159,7 +159,7 @@
   --color-info: var(--color-blue);
   --color-info-content: var(--color-euri-charcoal-50);
 
-  --color-input: var(--color-euri-charcoal-400);
+  --color-input: var(--color-euri-charcoal-500);
   --color-input-content: var(--color-euri-charcoal-50);
 
   --color-focus: var(--color-euri-green);
@@ -174,7 +174,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
   *,
   ::after,
   ::before,
@@ -191,7 +190,6 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
-
 
   /* Modern scrollbar styling */
   ::-webkit-scrollbar {
