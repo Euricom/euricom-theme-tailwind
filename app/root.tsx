@@ -40,9 +40,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <ThemeProvider defaultTheme="light" storageKey="ui-theme">
           {/* Navigation Bar with Theme Toggle */}
-          <div className="max-w-screen-lg mx-auto px-4 py-4 mb-6">
-            <div className="flex justify-between items-center">
-              <nav className="flex space-x-2 border rounded-lg p-1">
+          <div className="w-screen mx-auto px-4 py-2 mb-6 sticky top-0 bg-base-100 z-50 border-b border-base-300">
+            <div className="max-w-screen-lg mx-auto flex justify-between items-center">
+              <nav className="flex space-x-2 border rounded-lg p-1 bg-base-100">
                 <Link
                   to="/default-theme"
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/default-theme')}`}
@@ -56,7 +56,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   Shadcn Theme
                 </Link>
               </nav>
-
 
               <ThemeToggle />
             </div>
