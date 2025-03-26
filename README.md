@@ -1,43 +1,55 @@
-## Euricom Theme Integration
+## Euricom Tailwind Theme Integration
 
-This package provides a basic brand theme for internal Euricom projects that follows our new branding guidelines. It supports both light and dark themes out of the box.
+This package provides a basic brand theme for internal Euricom projects that follows our new branding guidelines. It supports both **light** and **dark** themes out of the box.
 
-⚠️ **Important**: Your project must use Tailwind CSS v4 to work with this theming system. If you already have Tailwind CSS v3 installed in your project, you should upgrade it to tailwind CSS v4.
+## Requirements ⚠️
+- tailwind CSS V4 
+- shadcn/ui
+
 
 ## Installation and Run Euricom Theme Previews
 
 ```sh
-npm install    # Install dependencies or "pnpm install"
-npm run dev    # Start dev server or "pnpm run dev"
+pnpm install
+pnpm dev
 ```
 
-### Option 1: Basic Tailwind Theme (Without ShadcN)
+## Option: Default Theme
 
-If you want to use only the Euricom theme colors with Tailwind:
+For projects using the default theme:
 
-1. Copy `tailwind.euri.css` from the `app` folder into your project
-2. Use this as your main styling entry point
-3. The theme restricts color usage to only Euricom-approved colors via the `@theme` configuration
-   - To use Tailwind's default colors as well, remove the `color*` initial line (not recommended)
+```
+copy the "tailwind.euri.css"
+```
 
-### Option 2: Full Theme with ShadcN Components
+## Option: ShadcN Theme
 
 For projects using ShadcN components:
 
-1. Copy both CSS files from the `app` folder:
+```
+copy the "tailwind.euri.css"
+```
 
-   - `tailwind.euri.css` - Main Euricom theming
-   - `tailwind.css` - ShadcN component styling
+```
+copy the "tailwind.css"
+```	
 
-2. Use the `tailwind.css` file as your main styling entry point, the default `tailwind.euri.css` is imported in the `tailwind.css` file.
-3. Copy the following modified ShadcN components to replace the default ones:
-   - `button.tsx`
-   - `input.tsx`
-   - `textarea.tsx`
-   - `tabs.tsx`
+⚠️ **Important**: Copy the following modified ShadcN components to replace the default ones in your project:
+```
+button.tsx
+input.tsx
+textarea.tsx
+tabs.tsx
+```
 
-These components have been specifically modified to work with our theming system.
+## Color Configuration
 
-### Theme Switching
+Default: Tailwind colors disabled (`--color-*: initial`)
 
-The theme includes both light and dark modes. The system respects the user's system preferences by default but can be toggled manually using the provided theme toggle component.
+To enable Tailwind colors, remove this line from `tailwind.euri.css`:
+
+```css
+@theme {
+   --color-*: initial; /* Remove this line to enable Tailwind colors */
+}
+```

@@ -15,6 +15,7 @@ export default function DefaultTheme() {
             name: 'Euri Green',
             color: 'euri-green',
             value: 'oklch(0.87 0.29 142.5)',
+            hex: '#1dff1a',
             variable: 'var(--color-euri-green)',
             tints: [
                 { name: '50', color: 'euri-green-50', variable: 'var(--color-euri-green-50)' },
@@ -33,6 +34,7 @@ export default function DefaultTheme() {
             name: 'Euri Charcoal',
             color: 'euri-charcoal',
             value: 'oklch(0.26 0.02 248.56)',
+            hex: '#1d252d',
             variable: 'var(--color-euri-charcoal)',
             tints: [
                 { name: '50', color: 'euri-charcoal-50', variable: 'var(--color-euri-charcoal-50)' },
@@ -51,6 +53,7 @@ export default function DefaultTheme() {
             name: 'Euri Midnight',
             color: 'euri-midnight',
             value: 'oklch(0.34 0.06 205.39)',
+            hex: '#004047',
             variable: 'var(--color-euri-midnight)',
             tints: [
                 { name: '50', color: 'euri-midnight-50', variable: 'var(--color-euri-midnight-50)' },
@@ -69,6 +72,7 @@ export default function DefaultTheme() {
             name: 'Euri Steel Gray',
             color: 'euri-steel-gray',
             value: 'oklch(0.87 0.02 202.03)',
+            hex: '#c6d8da',
             variable: 'var(--color-euri-steel-gray)',
             tints: [
                 { name: '50', color: 'euri-steel-gray-50', variable: 'var(--color-euri-steel-gray-50)' },
@@ -154,7 +158,7 @@ export default function DefaultTheme() {
                                                 key={tint.color}
                                                 className="w-5 h-5 rounded-sm border border-white/30 dark:border-black/30 shadow-sm cursor-pointer hover:scale-110 transition-transform"
                                                 style={{ backgroundColor: tint.variable }}
-                                                title={`${color.name} ${tint.name}`}
+                                                title={`${color.variable}`}
                                                 onClick={e => {
                                                     e.stopPropagation(); // Prevent triggering parent onClick
                                                     copyToClipboard(`var(--color-${tint.color})`, 'CSS', `${color.name} ${tint.name}`);
@@ -228,6 +232,35 @@ export default function DefaultTheme() {
                                             <span className="text-sm font-mono">CSS: </span>
                                             <div className="flex items-center gap-1">
                                                 <code className="text-sm">var(--color-{color.color})</code>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                >
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className={`flex cursor-pointer items-center justify-between rounded px-3 py-2 transition-colors ${hoveredSection === getSectionId(color.name, 'HEX')
+                                                ? 'bg-euri-steel-gray-200 dark:bg-euri-charcoal-700'
+                                                : 'bg-euri-steel-gray-100 dark:bg-euri-charcoal-800 hover:bg-euri-steel-gray-200 dark:hover:bg-euri-charcoal-700'
+                                                }`}
+                                            onClick={() => copyToClipboard(color.hex, 'HEX', color.name)}
+                                            onMouseEnter={() => setHoveredSection(getSectionId(color.name, 'HEX'))}
+                                            onMouseLeave={() => setHoveredSection(null)}
+                                            title="Click to copy HEX value"
+                                        >
+                                            <span className="text-sm font-mono">HEX: </span>
+                                            <div className="flex items-center gap-1">
+                                                <code className="text-sm">{color.hex}</code>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     width="14"

@@ -22,7 +22,7 @@
   --accent-foreground: var(--color-accent-content);
   --destructive: var(--color-error);
   --destructive-foreground: var(--color-error-content);
-  --border: var(--color-base-100);
+  --border: var(--color-base-200);
   --input: var(--color-input);
   --input-foreground: var(--color-input-content);
   --ring: var(--color-focus);
