@@ -7,10 +7,13 @@ This package provides a basic brand theme for internal Euricom projects that fol
 - shadcn/ui
 
 
-## Installation and Run Euricom Theme Previews
+## Quick Start
 
 ```sh
+# install dependencies
 pnpm install
+
+# startup (dev mode)
 pnpm dev
 ```
 
@@ -18,19 +21,19 @@ pnpm dev
 
 For projects using the default theme:
 
-```
-   copy the "theme.euri.css"
+```bash
+copy the "theme.euri.css"
 ```
 
 ## Option: ShadcN Theme
 
 For projects using ShadcN components:
 
-```
+```bash
 copy the "theme.euri.css"
 ```
 
-```
+```bash
 copy the "tailwind.css"
 ```	
 
@@ -53,3 +56,15 @@ To enable Tailwind colors, remove this line from `theme.euri.css`:
    --color-*: initial; /* Remove this line to enable Tailwind colors */
 }
 ```
+
+## Show Cases
+
+### Dark
+
+![](./docs/euricom-dark.png)
+![](./docs/shadcn-dark.png)
+
+### Light
+
+![](./docs/euricom-light.png)
+![](./docs/shadcn-light.png)
