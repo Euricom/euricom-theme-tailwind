@@ -2,7 +2,7 @@ import { MetaFunction } from '@remix-run/node';
 import { useState } from 'react';
 
 export const meta: MetaFunction = () => {
-    return [{ title: 'Default Theme' }, { name: 'description', content: 'A basic theme demo with default styling' }];
+    return [{ title: 'Euricom | Default Theme' }, { name: 'description', content: 'A basic theme demo with default styling' }];
 };
 
 export default function DefaultTheme() {
@@ -108,7 +108,7 @@ export default function DefaultTheme() {
             <h1 className="text-4xl font-bold text-center">Default Theme</h1>
 
             {/* Color Palette Section */}
-            <section className="border-1 border-base-100 dark:border-base-300  rounded-lg p-8 bg-base text-base-content shadow-sm dark:bg-base-200 ">
+            <section className="border-1 border-base-100 dark:border-base-300  rounded-lg p-8 bg-base text-base-content shadow-sm dark:bg-base-300 ">
                 <h2 className="text-2xl font-semibold mb-4">Euricom Brand Colors</h2>
                 <p className="mb-6">
                     The main color palette used in the Euricom design system. Click on any value to copy it to your clipboard.
@@ -144,7 +144,7 @@ export default function DefaultTheme() {
                         {brandColors.map(color => (
                             <div
                                 key={color.color}
-                                className="flex flex-col rounded-lg overflow-hidden border border-euri-steel-gray-200 dark:border-euri-charcoal-700 shadow-sm"
+                                className="flex flex-col rounded-lg overflow-hidden border border-euri-steel-gray-200 dark:border-euri-charcoal-500 shadow-md"
                             >
                                 <div
                                     className="h-36 relative group"
@@ -314,7 +314,7 @@ export default function DefaultTheme() {
                 </div>
             </section>
 
-            <section className="border-1 border-base-100 dark:border-base-300  rounded-lg p-8 bg-base text-base-content shadow-sm dark:bg-base-200 ">
+            <section className="border-1 border-base-100 dark:border-base-300  rounded-lg p-8 bg-base text-base-content shadow-sm dark:bg-base-300 ">
                 <h2 className="text-2xl font-semibold mb-4">Euricom Theme Components</h2>
                 <p className="mb-4">Here are components styled with Euricom's custom theme variables.</p>
 

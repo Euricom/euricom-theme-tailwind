@@ -1,4 +1,4 @@
-@import './tailwind.euri.css';
+@import './theme.euri.css';
 
 /*
   ---break---
@@ -50,7 +50,7 @@
 .dark {
   --background: var(--color-base-100);
   --foreground: var(--color-base-content);
-  --card: var(--color-base-200);
+  --card: var(--color-base-300);
   --card-foreground: var(--color-base-content);
   --popover: var(--color-base-300);
   --popover-foreground: var(--color-base-content);

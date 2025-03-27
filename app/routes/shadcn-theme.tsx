@@ -23,7 +23,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs';
 import { Textarea } from '~/components/ui/textarea';
 
 export const meta: MetaFunction = () => {
-  return [{ title: 'Shadcn Theme' }];
+  return [{ title: 'Euricom | Shadcn Theme' }];
 };
 
 export default function ShadcnThemePage() {

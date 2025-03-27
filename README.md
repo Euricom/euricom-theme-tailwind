@@ -19,7 +19,7 @@ pnpm dev
 For projects using the default theme:
 
 ```
-copy the "tailwind.euri.css"
+   copy the "theme.euri.css"
 ```
 
 ## Option: ShadcN Theme
@@ -27,7 +27,7 @@ copy the "tailwind.euri.css"
 For projects using ShadcN components:
 
 ```
-copy the "tailwind.euri.css"
+copy the "theme.euri.css"
 ```
 
 ```
@@ -46,7 +46,7 @@ tabs.tsx
 
 Default: Tailwind colors disabled (`--color-*: initial`)
 
-To enable Tailwind colors, remove this line from `tailwind.euri.css`:
+To enable Tailwind colors, remove this line from `theme.euri.css`:
 
 ```css
 @theme {
