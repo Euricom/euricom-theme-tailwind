@@ -1,4 +1,9 @@
 @import './theme.euri.css';
+@import 'tw-animate-css';
+/*
+  ---break---
+*/
+@custom-variant dark (&:is(.dark *));
 
 /*
   ---break---
@@ -140,5 +145,15 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-login-image {
+    background-image: var(--bg-login-image);
+  }
+
+  .bg-euricom-logo-image {
+    background-image: var(--euricom-logo-image);
   }
 }

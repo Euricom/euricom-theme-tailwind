@@ -28,7 +28,6 @@
   --color-euri-green-900: oklch(0.35 0.1 142.5);
 
   /* Euri Charcoal Tints */
-
   --color-euri-charcoal-50: oklch(0.98 0.02 248.56);
   --color-euri-charcoal-100: oklch(0.9 0.02 248.56);
   --color-euri-charcoal-200: oklch(0.82 0.02 248.56);
@@ -100,7 +99,9 @@
   --color-input: var(--color-euri-charcoal-400);
   --color-input-content: var(--color-euri-charcoal-50);
 
-  --color-focus: var(--color-blue);
+  /* Images */
+  --bg-login-image: url('~/assets/euricom-building.jpg');
+  --euricom-logo-image: url('~/assets/euricom-logo.svg');
 }
 
 :root {
@@ -163,6 +164,8 @@
   --color-input-content: var(--color-base-content);
 
   --color-focus: var(--color-euri-green);
+
+  --euricom-logo-image: url('~/assets/euricom-white.svg');
 }
 
 /*
@@ -174,7 +177,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
   *,
   ::after,
   ::before,

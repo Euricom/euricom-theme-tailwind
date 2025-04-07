@@ -11,4 +11,5 @@ export default defineConfig({
       // This matches the alias used in the codebase (e.g., in switch.tsx: "import { cn } from "~/lib/utils"")
     },
   },
+  assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.png'],
 });
