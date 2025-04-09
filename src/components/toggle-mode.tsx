@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useTheme } from '~/lib/theme';
 import { Switch } from './ui/switch';
 
-export function ThemeToggle() {
+export function ToggleMode() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 

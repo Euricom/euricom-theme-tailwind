@@ -2,21 +2,21 @@ import { Button } from '~/components/ui/button';
 import EuricomLogo from '../assets/euricom-logo.svg';
 import MicrosoftLogo from '../assets/microsoft-logo.svg';
 import { defaultValues } from '~/utils/defaultValues';
-import { ThemeToggle } from '~/components/theme-toggle';
 import { useNavigate } from 'react-router';
+import { ToggleMode } from '~/components/toggle-mode';
 
 export default function SignIn() {
   const { title, description, signInImage } = defaultValues;
   const navigate = useNavigate();
 
   const handleSignIn = () => {
-    navigate('/default-theme');
+    navigate('/');
   };
 
   return (
     <div className="h-screen flex relative">
       <div className="absolute right-4 top-4 z-50">
-        <ThemeToggle />
+        <ToggleMode />
       </div>
 
       <div className="hidden md:block md:w-1/2">

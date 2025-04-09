@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => {
   return [{ title: 'Euricom | Shadcn Theme' }];
 };
 
-export default function ShadcnThemePage() {
+export default function ShadcnTheme() {
   return (
     <div className="space-y-8">
       <h1 className="text-4xl font-bold text-center">Shadcn Theme</h1>
